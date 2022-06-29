@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Shop Manager</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+    <body>
+        <!-- Logo here -->
+        <div>
+            <img src ="/static/image/PetShop5.png">
+        </div>
+        <!-- Remove items form -->
+        <div id="remove_items">
+            <label> <h3> Shopping Cart List </h3> </label>
+            <form action="/remove_items" method="POST">
+                {% for item in session["shopping_list"] %}
+                <input type ="checkbox"  name="check" id="{{ item }}" value="{{ item }}">
+                <label for="{{ item }}" name="{{ item }}">"{{ item }}" </label> <br>
+                {% endfor %}
+                <input type ="submit" value="CHECK ITEMS" id="remove_btn">
+            </form>
+        </div>
+        <div id="add_item">
+            <form action="/add_items" method="POST">
+                <select name="selected_items" id="selected_items">
+                {% for item in session["all_items"] %}
+                <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+                </select>
+
+                <input type ="submit" value="ADD ITEM" id="add_btn">
+           </form>
+        </div>
+    </body>
+</html>

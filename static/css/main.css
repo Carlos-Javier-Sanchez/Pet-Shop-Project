@@ -1,0 +1,51 @@
+body {
+    font-family: shanti;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+img {
+   width: 300px;
+   height: 200px;
+}
+label {
+   margin: 25px 5px;
+}
+#remove_items {
+    background-color:#E5E5E5;
+    color: #302B29;
+    padding: 10px;
+}
+#add_btn {
+    background-color: #A2C88A;
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #A2C88A;
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+#add_btn:hover {
+    background-color: darkslategrey;
+    cursor: pointer;
+}
+#remove_btn {
+    background-color:#A2C88A;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+}
+
+select {
+    font-family: shanti;
+    font-size: 0.85em;
+    text-align: center;
+    width: 200px;
+    margin: 50px 10px;
+    padding: 5px 0;
+    border: 2px solid #A2C88A;
+}
